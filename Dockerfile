@@ -31,11 +31,5 @@ RUN ${ANDROID_HOME}/tools/bin/sdkmanager "platform-tools"
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-23"
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 
-## Install Gradle
-#RUN add-apt-repository ppa:cwchien/gradle
-#RUN apt-get update && \
-#    apt-get -y install gradle
-#RUN gradle -v
-
 # Clean Up
 RUN rm -rf /tmp/* /var/tmp/*
