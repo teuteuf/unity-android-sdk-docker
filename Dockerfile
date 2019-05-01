@@ -1,4 +1,4 @@
-FROM teuteuf/unity:latest_Android
+FROM teuteuf/unity:2019.1.0f2_Full
 
 RUN apt-get update && \
     apt-get install -y unzip wget
@@ -32,4 +32,5 @@ RUN ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-23"
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 
 # Clean Up
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/* /var/tmp/*
