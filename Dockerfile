@@ -1,4 +1,4 @@
-FROM teuteuf/unity:2019.1.0f2_Full
+FROM gableroux/unity3d:2019.1.0f2-android
 
 RUN apt-get update && \
     apt-get install -y unzip wget
