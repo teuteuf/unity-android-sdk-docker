@@ -1,4 +1,4 @@
-FROM gableroux/unity3d:2019.1.0f2-android
+FROM gableroux/unity3d:2019.1.4f1-android
 
 RUN apt-get update && \
     apt-get install -y unzip wget
